@@ -67,7 +67,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raindrop: {fileID: 1884137623411780, guid: 165bd65375153a54da5dcf66ec258ffc, type: 2}
   drops_per_frame: 30
-  width: 7
+  width: 8
   depth: 3
 --- !u!114 &114927186934156022
 MonoBehaviour:
