@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1278591426926190}
+  m_IsPrefabParent: 1
+--- !u!1 &1278591426926190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4823884488756040}
+  - component: {fileID: 114435344399920630}
+  - component: {fileID: 114927186934156022}
+  - component: {fileID: 114183388953322134}
+  m_Layer: 0
+  m_Name: Emitter
+  m_TagString: Emitter
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4823884488756040
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1278591426926190}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 10, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114183388953322134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1278591426926190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d252f6eab5cef544aa199e54a0f06bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHeight: 9
+--- !u!114 &114435344399920630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1278591426926190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf6e0611e2feaff44bae4accc61451fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raindrop: {fileID: 1884137623411780, guid: 165bd65375153a54da5dcf66ec258ffc, type: 2}
+  drops_per_frame: 30
+  width: 7
+  depth: 3
+--- !u!114 &114927186934156022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1278591426926190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bda41dabc339ae4aa25c63a47696067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHeight: 9
+  lightningSegment: {fileID: 1647909289308420, guid: ecb2606e22e618143a6233022554b465,
+    type: 2}
+  lightFlash: {fileID: 1813604727125410, guid: 62d1e64be8160f1418be718fef8a3f8d, type: 2}
+  userInteraction: 0
