@@ -7,24 +7,28 @@ public class UserInteraction : MonoBehaviour {
 
     private GameObject le;
     bool active;
-    Button b;
+    Button[] b;
 
     private void Start() {
         active = false;
         le = GameObject.FindGameObjectWithTag("Emitter");
 
-        b = GetComponentInChildren<Button>();
-        b.GetComponentInChildren<Text>().text = "Inactive";
+        b = GetComponentsInChildren<Button>();
+        b[1].GetComponentInChildren<Text>().text = "Inactive";
     }
 
-    public void OnClick() {
+    public void OnClickActive() {
         le.GetComponent<LightningEmitter>().UserInteraction();
         active = !active;
 
         if (active) {
-            b.GetComponentInChildren<Text>().text = "Active";
+            b[1].GetComponentInChildren<Text>().text = "Active";
         } else {
-            b.GetComponentInChildren<Text>().text = "Inactive";
+            b[1].GetComponentInChildren<Text>().text = "Inactive";
         }
+    }
+
+    public void ExitSimulation() {
+        Application.Quit();
     }
 }

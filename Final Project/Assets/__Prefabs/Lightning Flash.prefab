@@ -52,7 +52,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0
-  m_Range: 10
+  m_Range: 500
   m_SpotAngle: 44
   m_CookieSize: 10
   m_Shadows:
@@ -89,4 +89,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashLength: 0
-  maxIntensity: 100
+  maxIntensity: 1000000

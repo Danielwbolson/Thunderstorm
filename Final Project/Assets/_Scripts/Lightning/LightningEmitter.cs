@@ -93,7 +93,7 @@ public class LightningEmitter : MonoBehaviour {
             t = rrtList[i];
         }
         // Scale for lightning at top of tree
-        float scaleX = 0.015f;
+        float scaleX = 0.05f;
 
         // Create a queue for our nodes and go through BFS style
         Queue<Node> myQueue = new Queue<Node>();
@@ -105,7 +105,7 @@ public class LightningEmitter : MonoBehaviour {
             Vector3 currPos = curr.GetPosition();
 
             // decrease our scale to give lightning a more realistic look
-            scaleX *= 0.999f;
+            scaleX *= 0.996f;
 
             foreach (Node c in curr.GetChildren()) {
                 // cache our positons for the child node
@@ -148,7 +148,7 @@ public class LightningEmitter : MonoBehaviour {
      */
     void CreateLightningFlash(Vector3 pos) {
         GameObject lf = Instantiate(lightFlash) as GameObject;
-        lf.transform.position = new Vector3(pos.x, pos.y, -1);
+        lf.transform.position = new Vector3(pos.x, pos.y + 3, 7);
         lf.GetComponent<LightningFlash>().flashLength = flashTime + 0.1f;
     }
 

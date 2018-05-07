@@ -102,7 +102,7 @@ public class Boid : MonoBehaviour {
     foreach (GameObject scaryThing in obstacles) {
       Vector3 scaryPos = scaryThing.transform.position;
       scaryPos.y = 3.6f; // makes the boids assume the obstacle is at ground level
-      float d = Vector3.Distance(this.pos, scaryPos);
+      float d = Vector2.Distance(new Vector2(this.pos.x, this.pos.y), new Vector2(scaryPos.x, scaryPos.y));
       if (d > 0 && d < _friend_range) { // distance check helps for divide by zero and screen wrapping
         Vector3 toMe = Vector3.Normalize(this.pos - scaryPos) / d;
         result += toMe;
