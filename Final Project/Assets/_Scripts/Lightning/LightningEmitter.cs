@@ -17,7 +17,6 @@ public class LightningEmitter : MonoBehaviour {
     RRT rrt;
 
     // Local variables for this script
-    List<Tree> rrtList;
     Camera _main_camera;
     Vector3 mc_position;
 
@@ -35,7 +34,6 @@ public class LightningEmitter : MonoBehaviour {
     void Start() {
         rrt = GetComponent<RRT>();
         segments = new List<GameObject>();
-        rrtList = new List<Tree>();
 
         _main_camera = Camera.main;
         mc_position = _main_camera.transform.position;
@@ -76,7 +74,7 @@ public class LightningEmitter : MonoBehaviour {
 
         Node nStart = new Node(start);
 
-        int iterations = 500;
+        int iterations = 600;
 
         Tree t = rrt.Path(nStart, nGoal, iterations);
 
@@ -86,12 +84,7 @@ public class LightningEmitter : MonoBehaviour {
     /*
      * @brief Function that draws and rotates each lightning segment
      */
-    private void DrawLightning(Tree t = null) {
-        // Get a random lightning composition
-        if (t == null) {
-            int i = Random.Range(0, 499);
-            t = rrtList[i];
-        }
+    private void DrawLightning(Tree t) {
         // Scale for lightning at top of tree
         float scaleX = 0.05f;
 
@@ -105,7 +98,7 @@ public class LightningEmitter : MonoBehaviour {
             Vector3 currPos = curr.GetPosition();
 
             // decrease our scale to give lightning a more realistic look
-            scaleX *= 0.996f;
+            scaleX *= 0.997f;
 
             foreach (Node c in curr.GetChildren()) {
                 // cache our positons for the child node
