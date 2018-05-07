@@ -2,12 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
- * Much of this code is attributed to:
- * mklingen
- * https://gamedev.stackexchange.com/questions/71397/how-can-i-generate-a-lightning-bolt-effect
- */
-
  /*
   * @brief Class that represents a biased RRT.
   * 
