@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 5bda41dabc339ae4aa25c63a47696067
+timeCreated: 1525368871
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - lightningSegment: {fileID: 1647909289308420, guid: ecb2606e22e618143a6233022554b465,
+      type: 2}
+  - lightFlash: {fileID: 1813604727125410, guid: 62d1e64be8160f1418be718fef8a3f8d,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
